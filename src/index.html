@@ -5,10 +5,43 @@
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+  <body class="grid-container">
+    
+    <header class="header"> <img class="logo" src="C:\Users\Joki\Documents\Cc\DEV003-card-validation\src\logo.png">
+        <h1>Cooperativa Amazónica de Conservación Voluntaria y Comunal</h1></header>
+    
+    <aside class="aside">
+      NOSOTROS - INFORMACIÓN - PRODUCTOS
+    </aside>
+    
+    <nav class="nav">
+      PRODUCTOS</br>
+      MERMELADAS</br>
+      MIEL</br>
+      CACAO</br>
+      HARINAS</br>
+      PANADERÍA
+    </nav>
+    
+    <div class="carrito">
+      CARRITO DE COMPRAS
+    </div>
+       
+    <main class="main">
+      <h2>Datos personales</h2>
+      <p>Para continuar con su compra, necesitamos validar sus datos personales</p>
+      <label>Nombre <input id="nombre" type="text" placeholder="Nombre" autofocus required /></label></br>
+      <label>Apellidos<input id="apellidos" type="text"></label></br>
+      <label>E-mail<input id="email" type="email"></label></br>
+      <label>Dirección <input id="direccion" type="text"></label></br>
+      <label>Numero de tarjeta<input id="tarjeta" type="text"></label></br>
+      <label>Fecha de vencimiento<input id="vencimiento" type="month"></label></br>
+      <label>CCV<input id="ccv" type="text"></label></br>
+      <input type="submit">
+    </main>
+    
+    <footer class="footer">REDES SOCIALES - NRO. DE CONTACTO - DIRECCIÓN</footer>
+    
     <script src="index.js" type="module"></script>
   </body>
 </html>

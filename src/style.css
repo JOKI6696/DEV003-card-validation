@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 200px auto 300px;
+    grid-template-rows: 100px 40px auto 100px;
+    grid-template-areas:
+        "header header header"
+        "aside aside aside"
+        "nav main carrito"
+        "footer footer footer";
+}
+
+.header{
+    grid-area: header;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    font-size: larger;
+    font-style: bold;
+    color: rgb(242, 153, 0);
+    background-color: rgb(43, 78, 47);
+    padding: 20PX;
+
+}
+
+.logo{
+    height: 80px;
+    padding-right: 20px;
+}
+
+.nav{
+    grid-area: nav;
+    background-color:  rgb(169, 128, 57);
+    padding: 20px;
+}
+
+.carrito{
+    grid-area: carrito;
+    background-color: rgb(238, 199, 132);
+    padding: 20px;
+}
+
+.main{
+    grid-area: main;
+    background-color: rgb(232, 216, 189);
+    padding: 20px;
+}
+
+.aside{
+    grid-area: aside;
+    background-color: rgb(221, 221, 221);
+    padding: 10px;}
+
+.footer{
+    grid-area: footer;
+    background-color: darkgreen;
+    padding: 20px;
+}
+
