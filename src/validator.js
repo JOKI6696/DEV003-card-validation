@@ -7,24 +7,24 @@ const validator = {
     let addEven = 0;
     let addOdd = 0;
     //Función for para realizar los cálculos
-    for (let i=1; i<=ccReversed.length; i++){
+    for (let i=0; i<ccReversed.length; i++){
     //Para números en posición par
-    if (i % 0 === 0){
-      //Si la multiplicación es de dos cifras
-        addOdd += ccReversed[i];
-    //Para números en posicón impar
-    } else{
-      if(ccReversed[i] * 2 > 9){
-        addEven += ccReversed[i] * 2 - 9;
-      //Si la multiplicación es de una cifra
+      if (i % 2 !== 0){
+        //Si la multiplicación es de dos cifras
+        if(ccReversed[i] * 2 > 9){
+          addEven += ccReversed[i] * 2 - 9;
+        //Si la multiplicación es de una cifra
+        } else{
+          addEven += ccReversed[i] * 2;
+        }
+      //Para números en posicón impar
       } else{
-        addEven += ccReversed[i] * 2;
+       addOdd += ccReversed[i];
       }
+      }
+    //Retorna si es válido o no (T/F)
+    return (addEven + addOdd) % 10 === 0
     }
-    }
-  //Retorna si es válido o no (T/F)
-  return (addEven + addOdd) % 10 === 0
-  }
 
   , maskify : function hideNumber (ccNumber) {
     return ccNumber.slice(0, -4).replace(/[0-9]/g, '*').concat(ccNumber.slice(-4, ccNumber.len));
