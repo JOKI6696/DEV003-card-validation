@@ -26,8 +26,8 @@ const validator = {
     return (addEven + addOdd) % 10 === 0
     }
 
-  , maskify : function hideNumber (ccNumber) {
-    return ccNumber.slice(0, -4).replace(/[0-9]/g, '*').concat(ccNumber.slice(-4, ccNumber.len));
+  , maskify : function hideNumber(ccNumber) {
+    return ccNumber.slice(0, -4).replace(/[0-9]/g, '*').concat(ccNumber.slice(-4, ccNumber.length));
   }
 }
 
