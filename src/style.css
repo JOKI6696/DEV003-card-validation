@@ -10,8 +10,13 @@ html{
 
 body{
     height: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: serif;
 
+}
+
+a{
+    text-decoration: none;
+    font-weight: bolder;
 }
 
 /* input [type="number"]::-webkit-outer-spin-button,
@@ -37,8 +42,8 @@ input [type="number"]::-webkit-inner-spin-button{
     display: flex;
     align-content: center;
     align-items: center;
-    font-size: larger;
     font-style: bold;
+    font-size: 1.5vw;
     color: rgb(242, 153, 0);
     background-color: rgb(43, 78, 47);
     padding: 20PX;
@@ -51,15 +56,27 @@ input [type="number"]::-webkit-inner-spin-button{
 }
 
 .nav{
+    display: flex;
+    flex-direction: column;
     grid-area: nav;
     background-color:  rgb(169, 128, 57);
     padding: 20px;
+    justify-content: space-around;
 }
 
 .carrito{
+    display: flex;
     grid-area: carrito;
     background-color: rgb(238, 199, 132);
     padding: 20px;
+    
+}
+
+.compras {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    align-self: flex-start;
 }
 
 .main{
@@ -69,13 +86,53 @@ input [type="number"]::-webkit-inner-spin-button{
 }
 
 .aside{
+    display: flex;
     grid-area: aside;
     background-color: rgb(221, 221, 221);
-    padding: 10px;}
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.asideE:visited {
+    color:rgb(43, 78, 47);
+}
+
+.asideE:hover {
+    font-size: 1.1em;
+}
 
 .footer{
+    display: flex;
     grid-area: footer;
     background-color: darkgreen;
     padding: 20px;
+    font-size: smaller;
+    justify-content: center;
 }
 
+.flex {
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+    justify-content: space-between;
+}
+
+.payForm {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background:rgba(5, 7, 12 ,0.2);
+    
+}
+
+.element {
+    align-self: center;
+}
+
+.button {
+    width: 20vw;
+}
+
+.button:hover{
+    font-size: 1.1em;
+}
