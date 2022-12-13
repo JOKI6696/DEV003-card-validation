@@ -7,7 +7,7 @@
   </head>
   <body class="grid-container">
     
-    <header class="header"> <img class="logo" src="./media/logo.png">
+    <header class="header"> <img class="logo" src="./logo.png">
         <h1>Cooperativa Amazónica de Conservación Voluntaria y Comunal</h1></header>
     
     <aside class="aside">
@@ -19,36 +19,36 @@
     </aside>
     
     <nav class="nav">
-      <a class="asideE" href="#"> Todos</a> </br>
-      <a class="asideE" href="#"> Miel</a></br>
-      <a class="asideE" href="#"> Cacao</a></br>
-      <a class="asideE" href="#"> Harinas</a></br>
-      <a class="asideE" href="#"> Mermeladas</a></br>
+      <a class="asideE" href="#"> Todos</a><br>
+      <a class="asideE" href="#"> Miel</a><br>
+      <a class="asideE" href="#"> Cacao</a><br>
+      <a class="asideE" href="#"> Harinas</a><br>
+      <a class="asideE" href="#"> Mermeladas</a><br>
       <a class="asideE" href="#"> Panadería</a>
     </nav>
     
     <section class="carrito">
-      <img class="compras" src="./media/carrito.png">
+      <img class="compras" src="./carrito.png">
     </section>
   
     <main class="main">
       <div id="personalData"><h2>Datos personales</h2>
       <p>Para continuar con su compra, necesitamos validar sus datos personales</p>
-      <section class="payForm">
-        <div class="element"><label>Nombre <br><input id="name" type="text" placeholder="Nombre" required/></label></div></br>
-        <div class="element"><label>Apellidos<br><input id="lastName" type="text" placeholder="Apellidos" required></label></div></br>
-        <div class="element"><label>E-mail<br><input id="email" type="email" placeholder="Example@example.com" required></label></div></br>
-        <div class="element"><label>Dirección <br><input id="adress" type="text" placeholder="Ca./Jr./Mz./Av." required></label></div></br>
-        <div class="element"><label>Numero de tarjeta<br><input id="creditCard" name="tarjeta" type="text" 
-          placeholder="XXX XXXX XXXX XXXX" autofocus required onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"></label></div></br>
+      <form class="payForm">
+        <div class="element"><label>Nombre <br><input id="name" type="text" required placeholder="Nombre" autofocus></label></div><br>
+        <div class="element"><label>Apellidos<br><input id="lastName" type="text" required placeholder="Apellidos"></label></div><br>
+        <div class="element"><label>E-mail<br><input id="email" type="email" required placeholder="Example@example.com"></label></div><br>
+        <div class="element"><label>Dirección <br><input id="adress" type="text" required placeholder="Ca./Jr./Mz./Av."></label></div><br>
+        <div class="element"><label>Numero de tarjeta<br><input id="creditCard" name="tarjeta" type="text" required
+          placeholder="XXX XXXX XXXX XXXX" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)"></label></div><br>
         <div class="element"><label>Vencimiento</label></div>
         <div class="element"><section class="flex">
-          <label>Mes<br><input id="month" type="text" maxlength="2" size="2" placeholder="MM" required onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" ></label></br>
-          <label>Año<br><input id="year" type="text" maxlength="2" size="2" placeholder="YY" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" required></label></br>
-          <label>CCV<br><input id="ccv" type="text" maxlength="3" size="3" placeholder="XXX" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" required></label></br>
+          <label>Mes<br><input id="month" type="text" required maxlength="2" size="2" placeholder="MM" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" ></label><br>
+          <label>Año<br><input id="year" type="text" required maxlength="2" size="2" placeholder="YY" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" ></label><br>
+          <label>CCV<br><input id="ccv" type="text" required maxlength="3" size="3" placeholder="XXX" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" ></label><br>
         </section></div><br>
-        <div class="element"><input id="pay" class="button" type="submit" value="Pagar"></div>
-      </section>
+        <div class="element"><input class="pay" id="boton" type="submit" value="Pagar"></div>
+      </form>
       </div>
       <div id="result">
         <h2>Gracias por su compra</h2><br>

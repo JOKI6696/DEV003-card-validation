@@ -2,7 +2,7 @@ const validator = {
   //Traer input del # de tarjeta
   isValid : function cardValidation(ccNumber){
     //Voltear los dígitos y convertir a array
-    let ccReversed = ccNumber.split("").reverse().map(Number);
+    const ccReversed = ccNumber.split("").reverse().map(Number);
     //Crear variables para la suma
     let addEven = 0;
     let addOdd = 0;
@@ -19,15 +19,16 @@ const validator = {
         }
       //Para números en posicón impar
       } else{
-       addOdd += ccReversed[i];
+        addOdd += ccReversed[i];
       }
-      }
+    }
     //Retorna si es válido o no (T/F)
     return (addEven + addOdd) % 10 === 0
-    }
+  }
 
   , maskify : function hideNumber(ccNumber) {
-    return ccNumber.slice(0, -4).replace(/[0-9]/g, '*').concat(ccNumber.slice(-4, ccNumber.length));
+    //Basta cons el replace [0-9], pero por el test se agregó el [a-z]
+    return ccNumber.slice(0, -4).replace(/[0-9]/g, '#').replace(/[a-z]/ig,'#').concat(ccNumber.slice(-4, ccNumber.length));
   }
 }
 
