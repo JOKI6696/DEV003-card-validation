@@ -23,12 +23,9 @@ hide()
 function show(){
   document.getElementById("personalData").style.display = "none";
   document.getElementById("result").style.display = "block";
+  document.getElementById("maskifyHtml").innerHTML = "Su tarjeta " + validator.maskify(ccNumber.value) + " es válilda";
 }
-//Función que va a traer el maskify
-function maskifyNumber(){
-  const maskiNumber = validator.maskify(ccNumber.value)
-  document.getElementById("maskifyHtml").innerHTML = "Su tarjeta " + maskiNumber + " es válilda" 
-}
+
 //Función principal
 function require(){
   if(nombre.value.length === 0){
@@ -54,22 +51,7 @@ function require(){
   }
 }
 
-/*function validar(){
-  if (validator.isValid(ccNumber.value)) {
-    show();
-  } else {
-    alert("Upss, por favor revise los datos ingresados")
-  }
-}*/
-//Las funciones del botón validador
-botonInicial.addEventListener("click", maskifyNumber)
 //botonInicial.addEventListener("click", validar)
-botonInicial.addEventListener("click", require)
-/*botonInicial.addEventListener("click", function (){
-  if (validator.isValid(ccNumber.value)) {
-    show()
-  } else {
-    alert("Upss, por favor revise los datos ingresados")
-  }
-}
-);*/
+botonInicial.addEventListener("click", function(event){
+  event.preventDefault();
+  require();})
