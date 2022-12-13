@@ -19,12 +19,6 @@ a{
     font-weight: bolder;
 }
 
-/* input [type="number"]::-webkit-outer-spin-button,
-input [type="number"]::-webkit-inner-spin-button{
-    -webkit-appearance: none;
-    margin: 0;
-} */
-
 .grid-container{
     display: grid;
     gap: 10px;
