@@ -1,5 +1,5 @@
 const validator = {
-  //Traer input del # de tarjeta
+
   isValid : function cardValidation(ccNumber){
     //Voltear los dígitos y convertir a array
     const ccReversed = ccNumber.split("").reverse().map(Number);
